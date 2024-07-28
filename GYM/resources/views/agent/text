@@ -1,0 +1,14 @@
+        $course = new courseuser();
+        foreach($results as $data){
+            $course->user_id =$data->uid;   
+            $course->name =$data->ename;   
+            $course->repetion =$data->repetion;   
+            $course->day =$data->day;   
+            $course->muscle =$data->primary_muscle;   
+            $course->coach =$data->ccid;   
+            $course->photo =$data->photo;
+            $course->null ="null";
+            $course->date =Carbon::now()->format('Y-m-d');
+            $course->save();  
+            
+        }
